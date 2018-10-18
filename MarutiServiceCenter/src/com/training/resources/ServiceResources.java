@@ -54,7 +54,7 @@ public class ServiceResources {
 
 			  try {
 				  request.getSession().setAttribute("message", "");
-				  response.sendRedirect("/MarutiServiceCenter/login.jsp");
+				  response.sendRedirect("/MarutiServiceCenter/F.jsp");
 			} catch (IOException e) {
 			
 				e.printStackTrace();
@@ -85,7 +85,7 @@ public class ServiceResources {
 		if(status==1){
 			
 			  try {
-				  request.getSession().setAttribute("loginMsg", "validUser");
+				  request.getSession().setAttribute("loginMsg", true);
 				  response.sendRedirect("/MarutiServiceCenter/mainpage.jsp");
 			} catch (IOException e) {
 			
@@ -94,7 +94,7 @@ public class ServiceResources {
 		}
 		else{
 			try {
-				request.getSession().setAttribute("loginMsg", "try again");
+				request.getSession().setAttribute("loginMsg", false);
 				response.sendRedirect("/MarutiServiceCenter/login.jsp");
 				
 				
@@ -118,14 +118,14 @@ public class ServiceResources {
 		int status = dao.addNewCustomer(cust);
 		if(status==1){
 			  try {
-				  response.sendRedirect("/MarutiServiceCenter/mainpage.jsp");
+				  response.sendRedirect("/MarutiServiceCenter/success.jsp");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 		else{
 			try {
-				response.sendRedirect("/MarutiServiceCenter/login.jsp");
+				response.sendRedirect("/MarutiServiceCenter/AddCustomer.jsp");
 				
 			} catch (IOException e) {
 
@@ -281,7 +281,7 @@ public class ServiceResources {
 	@PUT
 	@Path("updatePhone")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateDonor(Customer customer,@QueryParam("newPhone") String newPhone){
+	public Response updatePhone(Customer customer,@QueryParam("newPhone") String newPhone){
 		int updated = dao.updatePhone(customer, newPhone);
 		if(updated ==1){
 			return Response.status(200).build();

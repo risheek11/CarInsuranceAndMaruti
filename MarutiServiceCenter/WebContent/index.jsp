@@ -5,7 +5,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<style type="text/css">
+	#main_form{
+		margin: auto;
+    	width: 50%;
+    	border: 3px solid black;
+    	padding: 10px;
+	}
+	,
+	#sbmt{
+		margin-left: 50%;
+	
+	}
+</style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script type="text/javascript" src="main.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,7 +25,7 @@
 </head>
 <body onload="init()">
 	<div><%@include file="header.html" %></div>
-	<div class="col-md-8">
+	<div class="col-md-8" id="main_form">
 	<form class="form-horizontal" action="rest/service/reg" method="post">
 	
 	
@@ -21,7 +33,7 @@
   <h4>Employee Register</h4>
   <div class="form-group">
     <label class="control-label col-md-2" for="name" >Name:</label>
-    <div class="col-md-10">
+    <div class="col-md-10" >
       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" onkeyup="validateReg()" required="required">
     </div>
   </div>
@@ -48,7 +60,7 @@
   </div>
 </form>
 </div>
-<a href="/MarutiServiceCenter/login.jsp">Click here to Login</a><br>
+
 
 <% if(session.getAttribute("message")!=null)out.print( session.getAttribute("message")); %>
 </body>

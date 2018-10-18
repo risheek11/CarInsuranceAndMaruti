@@ -6,6 +6,28 @@
 <html>
 <head>
 
+<style type="text/css">
+	#main_form{
+		margin: auto;
+    	width: 50%;
+    	border: 3px solid black;
+    	padding: 10px;
+	}
+	,
+	#sbmt{
+		margin-left: 50%;
+	
+	}
+	
+	#linkToAdd{
+		margin-left: 40%;
+	}
+	
+	
+	
+</style>
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script type="text/javascript" src="main.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,7 +35,7 @@
 </head>
 <body onload="init()">
 	<div><%@include file="header.html" %></div>
-	<div class="col-md-8">
+	<div class="col-md-8" id="main_form">
 <form class="form-horizontal"  method="post" action="rest/service/login">
   <div class="form-group">
     <label class="control-label col-md-4" for="name">Employee ID:</label>
@@ -36,6 +58,6 @@
   </div>
 </form>
 </div>
-
+<a href="/MarutiServiceCenter/index.jsp" id="linkToAdd">Click here to Register</a><br>
 </body>
 </html>

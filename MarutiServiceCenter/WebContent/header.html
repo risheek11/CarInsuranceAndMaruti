@@ -3,6 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style type="text/css">
 	.headBg{
 		height:200px;
@@ -10,8 +12,21 @@
 	}
 	
 	img{
-		width:100px;
+		margin-left:30%;
+		width:200px;
 		height:100px;
+		
+	}
+	h1{
+		display: inline;
+	}
+	#home{
+	
+		margin-left:10px;
+	}
+	#logout,#login{
+	
+		margin-left:10px;
 	}
 </style>
 
@@ -19,8 +34,11 @@
 </head>
 <body>
 	<header>
-	
+	<img alt="maruti" src="img/maruti.png">
 	<h1>Maruti Service</h1>
+	<a class="btn btn-dark" href="mainpage.jsp" role="button" id="home">Home</a>
+	<a class="btn btn-danger" href="logout.jsp" role="button" id="logout">Logout</a>
+	<a class="btn btn-primary" href="login.jsp" role="button" id="login">Login</a>
 	</header>
 </body>
 </html>

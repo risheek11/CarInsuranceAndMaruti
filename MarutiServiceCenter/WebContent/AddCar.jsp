@@ -31,7 +31,7 @@
 	
 
 	<div><%@include file="header.html" %></div>
-	
+	<c:if test="${loginMsg}">
 	<div class="col-md-8"  id="main_form">
 <form class="form-horizontal"  method="post" action="rest/service/addcar">
   <div class="form-group">
@@ -62,5 +62,6 @@
   </div>
 </form>
 </div>
+</c:if>
 </body>
 </html>

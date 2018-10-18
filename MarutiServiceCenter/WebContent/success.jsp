@@ -19,8 +19,10 @@
 <title>Maruti Service</title>
 </head>
 <body>
+	
 	<h1>Succcessfully added</h1>
 	<div><%@include file="header.html" %></div>
+	
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	 <a class="navbar-brand" href="#">Welcome To Maruti Service</a>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">

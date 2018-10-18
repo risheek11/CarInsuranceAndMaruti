@@ -39,7 +39,7 @@
 	
 
 	<div><%@include file="header.html" %></div>
-	
+	<c:if test="${loginMsg}">
 <div class="col-md-8" id="main_form">
 <form class="form-horizontal"  method="post" action="rest/service/addservice">
   <div class="form-group">
@@ -105,5 +105,6 @@
  
 
 <div id="estimateContainer"> </div>
+</c:if>
 </body>
 </html>

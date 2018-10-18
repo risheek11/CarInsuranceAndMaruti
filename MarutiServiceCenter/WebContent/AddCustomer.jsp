@@ -32,7 +32,14 @@
 <title>Maruti Service</title>
 </head>
 <body>
+
 	<div><%@include file="header.html" %></div>
+	<c:if test="${loginMsg}">
+	
+	
+
+
+	
 	<div class="col-md-8" id="main_form">
 <form class="form-horizontal"  method="post" action="rest/service/addcust">
   <div class="form-group">
@@ -70,5 +77,11 @@
 </form>
 </div>
 <a id ="linkToAdd" href="/MarutiServiceCenter/AddCar.jsp">Add Car to existing Customer</a>
+
+
+</c:if>
+	
+
+
 </body>
 </html>

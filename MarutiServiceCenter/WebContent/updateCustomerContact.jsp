@@ -6,6 +6,22 @@
 <html>
 <head>
 
+<style type="text/css">
+
+	#main_form{
+		margin: auto;
+    	width: 50%;
+    	border: 3px solid black;
+    	padding: 10px;
+	}
+	
+	#sbmt{
+		margin-left: 50%;
+	
+	}
+</style>
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="script.js"></script>
@@ -16,7 +32,8 @@
 	
 
 	<div><%@include file="header.html" %></div>
-	<div class="col-md-8">
+	<c:if test="${loginMsg}">
+	<div class="col-md-8" id="main_form">
 <form class="form-horizontal"  method="post" action="rest/service/addservice">
   <div class="form-group">
     <label class="control-label col-md-4" for="custName">Customer:</label>
@@ -45,7 +62,7 @@
 
 </form>
 </div>
-
+</c:if>
 
 </body>
 </html>

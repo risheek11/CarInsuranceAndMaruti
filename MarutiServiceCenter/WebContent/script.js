@@ -259,30 +259,36 @@ function loadEstimate(jsonData){
 function loadServicesForReg(){
 	
 	var container = document.getElementById("recordContainer");
-	var date = document.createElement('h4');
-	var table = document.createElement('table');
 	
-	var rowHeading = document.createElement('tr');
 	
-	var serviceType = document.createElement('th');
-	var deliveryDate = document.createElement('th');
 	
 	
 	var regno = $('#regno').val();
 	$.getJSON('http://localhost:8080/MarutiServiceCenter/rest/service/servicerecs/'+regno, function(data) {
 		var dates = Object.keys(data);
 		var arrayLength = dates.length;
+		
+		
 		for (var i = 0; i < arrayLength; i++) {
-			ser = dates[i];
-			date.innerHTML ="Date:" + ser; 
+			var table = document.createElement('table');
+			var rowHeading = document.createElement('tr');
 			
-			container.appendChild(date);
+			var serviceType = document.createElement('th');
+			var deliveryDate = document.createElement('th');
 			serviceType.innerHTML = "Service Type";
 			deliveryDate.innerHTML = "Delivery Date";
 			rowHeading.appendChild(serviceType);
 			rowHeading.appendChild(deliveryDate);
 			
 			table.appendChild(rowHeading);
+			
+			ser = dates[i];
+			console.log(ser);
+			var date = document.createElement('h4');
+			date.innerHTML ="Date:" + ser; 
+			
+			container.appendChild(date);
+			
 			$.each(serv =data[ser], function(index){
 				var row = document.createElement('tr');
 				var serType = document.createElement('td');
@@ -301,6 +307,7 @@ function loadServicesForReg(){
 		    });
 			container.appendChild(table);
 		}
+		
     })
 
 	
