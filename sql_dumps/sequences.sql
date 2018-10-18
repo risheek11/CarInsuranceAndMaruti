@@ -1,0 +1,2 @@
+create SEQUENCE service_id_ri START WITH 1 INCREMENT by 1;
+create SEQUENCE custIdRi INCREMENT BY 1 START WITH 1;
